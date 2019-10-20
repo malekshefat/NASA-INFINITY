@@ -1,6 +1,8 @@
 package spaceapps.team42.nasadata;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -46,7 +49,7 @@ public class MarsAdapter extends RecyclerView.Adapter<MarsAdapter.ViewHolder> {
         return data != null ? data.size() : 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         AppCompatImageView imageView;
         AppCompatTextView caption, date;
@@ -57,6 +60,19 @@ public class MarsAdapter extends RecyclerView.Adapter<MarsAdapter.ViewHolder> {
             caption = itemView.findViewById(R.id.item_caption);
             date = itemView.findViewById(R.id.item_date);
             caption.setVisibility(View.GONE);
+            imageView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            ActivityOptionsCompat activityOptionsCompat =
+                    ActivityOptionsCompat
+                            .makeSceneTransitionAnimation((Activity) context,
+                                    imageView,
+                                    "image");
+            Intent intent = new Intent(context, ImageZoom.class);
+            intent.putExtra("image", data.get(getAdapterPosition()).getImage());
+            context.startActivity(intent, activityOptionsCompat.toBundle());
         }
     }
 }

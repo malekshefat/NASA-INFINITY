@@ -3,7 +3,7 @@
     <string name="API_KEY">0Mz06HDTIvATrZhQrAj6aG1LTVZuyL4XdPjoo63N</string>
 
     <string name="abs_mag">Absolute Magnitude h = %.2f</string>
-    <string name="diameter">Diameter = %.2f1 - %.2f2 (meters)</string>
+    <string name="diameter">Diameter = %.2f1 - %.2f2 (km)</string>
     <string name="rel_vel">Relative Velocity = %.1f (kmph)</string>
     <string name="distance">Miss Distance = %.2f (km)</string>
 
