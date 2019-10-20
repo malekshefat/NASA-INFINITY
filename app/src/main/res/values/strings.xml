@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">NASA DATA</string>
+    <string name="API_KEY">0Mz06HDTIvATrZhQrAj6aG1LTVZuyL4XdPjoo63N</string>
+
+    <string name="abs_mag">Absolute Magnitude h = %.2f</string>
+    <string name="diameter">Diameter = %.2f1 - %.2f2 (meters)</string>
+    <string name="rel_vel">Relative Velocity = %.1f (kmph)</string>
+    <string name="distance">Miss Distance = %.2f (km)</string>
+
+    <array name="titles">
+        <item>Asteroids</item>
+        <item>EPIC</item>
+        <item>Mars</item>
+        <item>APOD</item>
+    </array>
+
+    <integer-array name="icons">
+        <item>@drawable/ic_launcher_foreground</item>
+        <item>@drawable/near_me</item>
+        <item>@drawable/near_me</item>
+        <item>@drawable/near_me</item>
+    </integer-array>
+
+    <string-array name="EPIC_type">
+        <item>enhanced</item>
+        <item>natural</item>
+    </string-array>
+
+    <string-array name="mars_rovers">
+        <item>Curiousity</item>
+        <item>Opportunity</item>
+        <item>Spirit</item>
+    </string-array>
+
+    <string-array name="mars_cameras">
+        <item>FHAZ</item>
+        <item>RHAZ</item>
+        <item>MAST</item>
+        <item>CHEMCAM</item>
+        <item>MAHLI</item>
+        <item>MARDI</item>
+        <item>NAVCAM</item>
+        <item>PANCAM</item>
+        <item>MINITES</item>
+    </string-array>
+
+    <string-array name="EPIC_qual">
+        <item>png</item>
+        <item>jpg</item>
+        <item>thumb</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apod_title">Today\'s Picture</string>
+    <string name="apod_auto_desc">Set As Phone Wallpaper Automatically?</string>
+</resources>
