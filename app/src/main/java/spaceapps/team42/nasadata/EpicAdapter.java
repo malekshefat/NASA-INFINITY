@@ -36,6 +36,7 @@ public class EpicAdapter extends RecyclerView.Adapter<EpicAdapter.ViewHolder> {
         MarsItemData itemData = data.get(position);
         Glide.with(context)
                 .load(itemData.getImage())
+                .dontAnimate()
                 .into(holder.imageView);
         holder.caption.setText(itemData.getCaption());
         holder.date.setText(itemData.getDate());

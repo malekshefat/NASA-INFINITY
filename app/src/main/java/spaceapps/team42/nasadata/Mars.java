@@ -2,7 +2,6 @@ package spaceapps.team42.nasadata;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +63,7 @@ public class Mars extends Fragment implements AdapterView.OnItemSelectedListener
         qualitiesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         rover.setAdapter(qualitiesAdapter);
 
-        recyclerView = v.findViewById(R.id.epic_recycler);
+        recyclerView = v.findViewById(R.id.mars_recycler);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
         loadMars();
@@ -117,9 +116,7 @@ public class Mars extends Fragment implements AdapterView.OnItemSelectedListener
             for (int i = 0; i < photos.length(); i++) {
                 JSONObject photo = photos.getJSONObject(i);
                 String date = photo.getString("earth_date");
-                String image = photo.getString("img_src");
-                Log.d("MSL", "parseJSON: " + image);
-                Log.d("MSL", "parseJSON: " + date);
+                String image = photo.getString("img_src").replace("http", "https");
 
                 MarsItemData itemData = new MarsItemData();
                 itemData.setDate(date);
