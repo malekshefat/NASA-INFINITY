@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NASA DATA</string>
+    <string name="app_name">NASA Infinity</string>
     <string name="API_KEY">0Mz06HDTIvATrZhQrAj6aG1LTVZuyL4XdPjoo63N</string>
 
     <string name="abs_mag">Absolute Magnitude h = %.2f</string>
@@ -27,7 +27,7 @@
     </string-array>
 
     <string-array name="mars_rovers">
-        <item>Curiousity</item>
+        <item>Curiosity</item>
         <item>Opportunity</item>
         <item>Spirit</item>
     </string-array>
